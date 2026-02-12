@@ -1,0 +1,31 @@
+[project]
+name = "student_repo_analyzer"
+version = "0.1.0"
+description = "LLM application for analyzing students' repos"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Kirill K. Smirnov", email = "kirill.k.smirnov@gmail.com"},
+]
+dependencies = [
+    "langchain-gigachat",
+    "dotenv",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "mypy",
+    "pylint",
+]
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = [
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "line-too-long",
+    "broad-exception-caught",
+    "invalid-name",
+]
+
